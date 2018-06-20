@@ -7,9 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace noaa;
-use noaa\Base;
-use noaa\Station;
+namespace Origindesign\Noaa;
+
+
 
 /**
  * Observation data

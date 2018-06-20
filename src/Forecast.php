@@ -7,9 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace noaa;
-use noaa\Base;
-use noaa\ForecastPeriod;
+namespace Origindesign\Noaa;
+
+
 use DateTime;
 use DateInterval;
 

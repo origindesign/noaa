@@ -1,15 +1,16 @@
 <?php
-namespace noaa\util;
+
+namespace Origindesign\Noaa\Util;
 /**
  * class to fetch json data from noaa
  */
-use noaa\util\Cache;
-use noaa\Point;
-use noaa\Forecast;
+
 use Exception;
 
 class Fetch{
-        /** @var noaa\util\Cache */
+
+
+
 		protected $cache;
 
         /**
@@ -27,13 +28,15 @@ class Fetch{
                 $this->key = $key;
 		}
 
-		/**
-		 * @param string $url
-		 * @param string $ttl
-		 * @see http://php.net/manual/en/dateinterval.construct.php
-		 * @return stdObject from json
-		 */
-		public function load($url, $ttl = "PT1H"){
+
+    /**
+     * @param $url
+     * @param string $ttl
+     *
+     * @return mixed
+     * @throws \Exception
+     */
+    public function load($url, $ttl = "PT1H"){
 				$status = $this->cache->status($url, $ttl);
 				if($status != "fresh"){ //stale or none
 						$res = $this->remote($url);
@@ -49,18 +52,23 @@ class Fetch{
 				return json_decode($this->cache->load($url));
 		}
 
-		/**
-		 * @return noaa\util\Cache
-		 */
-		public function getCache(){
+
+
+    /**
+     * @return \Origindesign\Noaa\Util\Cache
+     */
+    public function getCache(){
 				return $this->cache;
 		}
 
-		/**
-		 * @param string $url
-		 * @return string contents from noaa
-		 */
-		protected function remote($url){
+
+    /**
+     * @param $url
+     *
+     * @return mixed
+     * @throws \Exception
+     */
+    protected function remote($url){
 				$rm = curl_init($url);
 				curl_setopt($rm, CURLOPT_FOLLOWLOCATION, true);
 				curl_setopt($rm, CURLOPT_MAXREDIRS, 20);

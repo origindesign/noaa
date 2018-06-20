@@ -2,13 +2,14 @@
 /**
  * Class to describe a point
  */
-namespace noaa;
-use noaa\Base;
+
+namespace Origindesign\Noaa;
 
 /**
  * Point class is constructed with latitude and longitude
  */
 class Point extends Base{
+
 		/**
 		 * Refresh Frequency
 		 * @see http://php.net/manual/en/dateinterval.construct.php

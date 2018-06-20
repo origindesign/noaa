@@ -7,8 +7,8 @@
  * file that was distributed with this source code.
  */
 
-namespace noaa;
-use noaa\Base;
+namespace Origindesign\Noaa;
+
 use DateTime;
 
 /**
