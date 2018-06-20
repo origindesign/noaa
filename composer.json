@@ -15,7 +15,9 @@
         "php": ">=5.3.0",
 		"ext-curl": "*"
     },
-    "autoload": {
-        "psr-4": {"noaa\\": "noaa/"}
+   "autoload": {
+        "psr-4": {
+            "origindesign\\noaa\\": "src/"
+        }
     }
 }
