@@ -62,7 +62,7 @@ class ForecastPeriod extends Base{
 		 * @return bool true if between 6am and 6pm
 		 */
 		public function getIsDayTime(){
-				return $this->properties->isDayTime == true;
+				return $this->properties->isDaytime == true;
 		}
 
 		/**

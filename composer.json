@@ -4,6 +4,7 @@
     "homepage": "https://github.com/origindesign/noaa",
     "type": "library",
     "license": "MIT",
+	"minimum-stability": "dev",
     "authors": [
         {
             "name": "Origin Design",
