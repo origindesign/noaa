@@ -12,8 +12,8 @@ namespace Origindesign\Noaa;
  * main class for working with noaa forecasts and conditions
  */
 
-use Origindesign\Noaa\util\Fetch;
-use Origindesign\Noaa\util\Cache;
+use Origindesign\Noaa\Util\Fetch;
+use Origindesign\Noaa\Util\Cache;
 
 
 class NOAA{
