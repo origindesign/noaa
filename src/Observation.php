@@ -46,12 +46,20 @@ class Observation extends Base{
 				}
 				return $dt;
 		}
+		
+		/**
+		 * @return icon URL
+		 */
+		public function getIcon(){
+				return $this->properties->properties->icon;
+		}
+		
 
 		/**
 		 * @return string description
 		 */
 		public function getDescription(){
-				return $this->properties->properties->description;
+				return $this->properties->properties->textDescription;
 		}
 
 		/**
