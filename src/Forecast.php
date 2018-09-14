@@ -47,4 +47,5 @@ class Forecast extends Base{
 		public function isExpired(){
 				return $this->getUpdated()->add(new DateInterval(self::TTL)) < new DateTime();
 		}
+		
 }//class
