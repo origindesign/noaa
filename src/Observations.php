@@ -18,7 +18,7 @@ class Observations extends Base{
 		 * refresh frequency
 		 * @see http://php.net/manual/en/dateinterval.construct.php
 		 */
-		const TTL = "PT1H";
+		const TTL = "PT5M";
 
 		/**
 		 * @return array of periods
